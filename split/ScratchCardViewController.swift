@@ -10,12 +10,22 @@ import UIKit
 import ScratchCard
 
 class ScratchCardViewController: UIViewController {
-    var scratchCard: ScratchUIView!
 
+    @IBOutlet weak var scratchCard: ScratchUIView!
+    var scratchCard1 :ScratchUIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        scratchCard  = ScratchUIView(frame: CGRect(x:0, y:0, width:self.view.frame.size.width, height:self.view.frame.size.height),Coupon: "nil", MaskImage: "NickelGray", ScratchWidth: CGFloat(40))
-        self.view.addSubview(scratchCard)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ScratchCardViewController.dismissScratchCard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        scratchCard1  = ScratchUIView(frame: CGRect(x:0, y:0, width:scratchCard.frame.size.width, height:scratchCard.frame.size.height),Coupon: "nil", MaskImage: "NickelGray", ScratchWidth: CGFloat(40))
+        scratchCard.layer.cornerRadius = 10
+        scratchCard.layer.masksToBounds = true;
+        scratchCard.addSubview(scratchCard1)
 
         // Do any additional setup after loading the view.
     }
@@ -25,20 +35,24 @@ class ScratchCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func doneButtonPressed(_ sender: Any) {
-        self.dismiss(animated: false) { 
-            
-        }
+    func dismissScratchCard() {
+        scratchCard.isHidden = true
+        
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func PayBtnPressed(_ sender: Any) {
+        
+        scratchCard.isHidden = false
     }
-    */
+
+    @IBAction func payBtn2Pressed(_ sender: Any) {
+        scratchCard.isHidden = false
+
+    }
+    @IBAction func payBtn3Pressed(_ sender: Any) {
+        scratchCard.isHidden = false
+
+    }
+
 
 }
