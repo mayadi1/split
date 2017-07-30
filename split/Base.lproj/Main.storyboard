@@ -9,6 +9,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Scratch Card View Controller-->
+        <scene sceneID="lmH-II-Ss7">
+            <objects>
+                <viewController id="o5T-Xd-l6j" customClass="ScratchCardViewController" customModule="split" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ajn-Mq-4VC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ixU-p0-BP0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1oe-iP-9QF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-9b-o6e">
+                                <rect key="frame" x="16" y="166" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-4S-myk">
+                                <rect key="frame" x="16" y="211" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf0-mc-pUC">
+                                <rect key="frame" x="16" y="253" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="testPassword" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZA-va-W4X">
+                                <rect key="frame" x="16" y="298" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1S-Xs-TOo">
+                                <rect key="frame" x="164" y="576" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="o5T-Xd-l6j" eventType="touchUpInside" id="Y6c-Gu-nXI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Automatically expire after 24 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-Gj-2JA">
+                                <rect key="frame" x="16" y="539" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Mx-dU-bEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1135.2" y="752.47376311844084"/>
+        </scene>
         <!--24hrs access-->
         <scene sceneID="uhd-O6-hFp">
             <objects>
@@ -46,6 +109,11 @@
                                                     <state key="normal" title="Pay">
                                                         <color key="titleColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="o5T-Xd-l6j" kind="popoverPresentation" popoverAnchorView="EQS-mg-Gse" id="xbm-2N-Pje">
+                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        </segue>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -80,6 +148,11 @@
                                                     <state key="normal" title="Pay">
                                                         <color key="titleColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="o5T-Xd-l6j" kind="popoverPresentation" popoverAnchorView="lhA-1B-zxZ" id="cOb-Cn-RNN">
+                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        </segue>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -114,6 +187,11 @@
                                                     <state key="normal" title="Pay">
                                                         <color key="titleColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="o5T-Xd-l6j" kind="popoverPresentation" popoverAnchorView="1gz-JI-wuE" id="Uen-8c-sHC">
+                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        </segue>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -148,6 +226,11 @@
                                                     <state key="normal" title="Pay">
                                                         <color key="titleColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="o5T-Xd-l6j" kind="popoverPresentation" popoverAnchorView="3w5-Xg-q2n" id="XyJ-14-hsH">
+                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        </segue>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -170,7 +253,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qd-vF-gh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="724.58770614692662"/>
+            <point key="canvasLocation" x="-436" y="754"/>
         </scene>
         <!--Monthly access -->
         <scene sceneID="AOH-Uu-gre">
@@ -216,4 +299,7 @@
         <image name="hulu-logo" width="1920" height="1080"/>
         <image name="netflix" width="640" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xbm-2N-Pje"/>
+    </inferredMetricsTieBreakers>
 </document>
